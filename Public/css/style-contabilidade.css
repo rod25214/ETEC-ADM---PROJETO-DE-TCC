@@ -1,0 +1,340 @@
+.TV {
+  background-color: #17181f;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.TV .div {
+  background-color: #17181f;
+  overflow: hidden;
+  width: 1280px;
+  height: 720px;
+  position: relative;
+}
+
+.focus-seleção {
+  position: relative;
+  width: 58.75px;
+  height: 37px;
+  flex-shrink: 0;
+  top: 181px;
+  left: 11px;
+  border-radius: 20px 0px 0px 20px;
+  background-color: rgba(0, 0, 0, 0.253);
+  cursor: pointer;
+  box-shadow: -2px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+
+}
+
+.f3 {
+  position: relative;
+  width: 58.75px;
+  height: 37px;
+  flex-shrink: 0;
+  top: 5px;
+  left: 11px;
+  border-radius: 20px 0px 0px 20px;
+  background-color: rgba(0, 0, 0, 0.253);
+  cursor: pointer;
+  box-shadow: -2px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.f2 {
+  position: relative;
+  width: 58.75px;
+  height: 37px;
+  flex-shrink: 0;
+  top: 93px;
+  left: 11px;
+  border-radius: 20px 0px 0px 20px;
+  background-color: rgba(0, 0, 0, 0.253);
+  cursor: pointer;
+  box-shadow: -2px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.f4 {
+  position: relative;
+  width: 58.75px;
+  height: 37px;
+  flex-shrink: 0;
+  top: 120px;
+  left: 11px;
+  border-radius: 20px 0px 0px 20px;
+  background-color: rgba(0, 0, 0, 0.253);
+  cursor: pointer;
+  box-shadow: -2px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.f5 {
+  position: relative;
+  width: 58.75px;
+  height: 37px;
+  flex-shrink: 0;
+  top: 132px;
+  left: 11px;
+  border-radius: 20px 0px 0px 20px;
+  background-color: rgba(0, 0, 0, 0.253);
+  cursor: pointer;
+  box-shadow: -2px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.f6 {
+  position: relative;
+  width: 58.75px;
+  height: 37px;
+  flex-shrink: 0;
+  top: 144px;
+  left: 11px;
+  border-radius: 20px 0px 0px 20px;
+  background-color: rgba(0, 0, 0, 0.253);
+  cursor: pointer;
+  box-shadow: -2px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.TV .menu-lateral {
+  position: absolute;
+  width: 70px;
+  height: 720px;
+  top: 0;
+  left: 0;
+  background-color: #15161d;
+  z-index: 999;
+}
+
+.TV .overlap-group {
+  position: absolute;
+  width: 59px;
+  height: 35px;
+  top: 1px;
+  left: 0px;
+  background-image: url(./img/vector.svg);
+  background-size: 100% 100%;
+}
+
+.TV .cone-produtos {
+  position: absolute;
+  width: 21px;
+  height: 19px;
+  top: 9px;
+  left: 15px;
+}
+
+.TV .cone-abrir-painel {
+  position: absolute;
+  width: 21px;
+  height: 15px;
+  top: 397px;
+  left: 25px;
+}
+
+.TV .cone-viso-geral {
+  position: absolute;
+  width: 18px;
+  height: 17px;
+  top: 10px;
+  left: 16px;
+  z-index: 12;
+}
+
+.TV .cone-home {
+  position: absolute;
+  width: 15px;
+  height: 16px;
+  top: 10px;
+  left: 17px;
+}
+
+.TV .cone-grfico-linha {
+  position: absolute;
+  width: 21px;
+  height: 12px;
+  top: 12px;
+  left: 15px;
+}
+
+.TV .cone-pessoa {
+  position: absolute;
+  width: 16px;
+  height: 17px;
+  top: 10px;
+  left: 19px;
+}
+
+.TV .icone-engrenagem {
+  position: absolute;
+  width: 21px;
+  height: 20px;
+  top: 8px;
+  left: 16px;
+}
+
+.TV .dummy-icon {
+  position: absolute;
+  width: 28px;
+  height: 27px;
+  top: 23px;
+  left: 21px;
+}
+
+.TV .rectangle {
+  left: 100px;
+  position: absolute;
+  width: 316px;
+  height: 542px;
+  top: 137px;
+  background-color: #20212c;
+  border-radius: 15px;
+  box-shadow: inset 0px 4px 4px #00000040, inset 0px 4px 4px #00000040, inset 0px 4px 4px #00000040;
+}
+
+.TV .rectangle-2 {
+  position: absolute;
+  width: 316px;
+  height: 542px;
+  top: 137px;
+  left: 444px;
+  background-color: #20212c;
+  border-radius: 15px;
+  box-shadow: inset 0px 4px 4px #00000040, inset 0px 4px 4px #00000040, inset 0px 4px 4px #00000040;
+}
+
+.TV .rectangle-3 {
+  left: 789px;
+  position: absolute;
+  width: 316px;
+  height: 542px;
+  top: 137px;
+  background-color: #20212c;
+  border-radius: 15px;
+  box-shadow: inset 0px 4px 4px #00000040, inset 0px 4px 4px #00000040, inset 0px 4px 4px #00000040;
+}
+
+.TV .rectangle-4 {
+  left: 1133px;
+  position: absolute;
+  width: 316px;
+  height: 542px;
+  top: 137px;
+  background-color: #20212c;
+  border-radius: 15px;
+  box-shadow: inset 0px 4px 4px #00000040, inset 0px 4px 4px #00000040, inset 0px 4px 4px #00000040;
+}
+
+.TV .text-wrapper {
+  position: absolute;
+  width: 383px;
+  top: 23px;
+  left: 101px;
+  font-family: "Poppins-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 46px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.TV .text-wrapper-2 {
+  position: absolute;
+  width: 283px;
+  top: 107px;
+  left: 112px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #a36bfd;
+  font-size: 17px;
+  letter-spacing: 0;
+  line-height: normal;
+  cursor: default;
+}
+
+.TV .text-wrapper-3 {
+  position: absolute;
+  width: 283px;
+  top: 107px;
+  left: 456px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #a36bfd;
+  font-size: 17px;
+  letter-spacing: 0;
+  line-height: normal;  
+  cursor: default;
+}
+
+.TV .text-wrapper-4 {
+  position: absolute;
+  width: 283px;
+  top: 107px;
+  left: 802px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #a36bfd;
+  font-size: 17px;
+  letter-spacing: 0;
+  line-height: normal;
+  cursor: default;
+}
+
+.TV .text-wrapper-5 {
+  position: absolute;
+  width: 283px;
+  top: 107px;
+  left: 1144px;
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  color: #a36bfd;
+  font-size: 17px;
+  letter-spacing: 0;
+  line-height: normal;
+  cursor: default;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #17181f;
+} 
+
+.text-wrapper-2:hover, .text-wrapper-3:hover, .text-wrapper-4:hover, .text-wrapper-5:hover {
+  text-decoration: underline;
+}
+
+.ajust {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+  transition: 1s ease;;
+}
+
+.circulo {
+  left: 1188px;
+  position: absolute;
+  width: 63px;
+  height: 63px;
+  top: 15px;
+  background-color: #20212c;
+  border-radius: 200px;
+}
+
+.circulo:hover {
+  background-color: #2a2b3a;
+}
+
+.bell {
+  transition: transform 0.5s ease;
+  left: 0px;
+  position: absolute;
+  width: 63px;
+  height: 63px;
+  top: 0px; 
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
