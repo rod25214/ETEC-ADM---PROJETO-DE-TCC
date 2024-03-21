@@ -46,13 +46,13 @@
         <div class="pedidos"><div class="ef2"></div><p class="p2">Pedidos</p></div>
         <div class="itens"><div class="ef3"></div><p class="p2">Itens vendidos</p></div>
         <div class="botões"></div>
-        <div class="a1">    <canvas id="graficoVendas" width="400" height="400"></canvas><p class="p3">Vendas ao longo do tempo</p>
+        <div class="a1">   <p class="p3">Vendas ao longo do tempo</p>
           <div class="a11"></div>
         </div>
-        <div class="a2"><p class="p4">Faça a análise do Ranking de Vendas por:</p><canvas id="graficoBarra" class="grafico"></canvas></div>
-        <div class="a3"><canvas id="graficoLinha" width="400" height="400"></canvas><p class="p3">Horario com mais vendas:</p></div>
-        <div class="a4"><canvas id="graficoPizza" width="400" height="400"></canvas><p class="p3">Atingimento de Meta</p></div>
-        <div class="a5"><p class="p3">Localidades (UF e Região)</p><canvas id="graficoBarra2" width="900" height="400"></canvas></div>
+        <div class="a2"><p class="p4">Faça a análise do Ranking de Vendas por:</p></div>
+        <div class="a3"><p class="p3">Horario com mais vendas:</p></div>
+        <div class="a4"><p class="p3">Atingimento de Meta</p></div>
+        <div class="a5"><p class="p3">Localidades (UF e Região)</p></div>
         <div class="circulo"><img class="bell" src="img/menu-hamburguer (1).png" /></div>
       </div>
     </div>
