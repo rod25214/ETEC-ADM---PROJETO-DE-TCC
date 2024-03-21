@@ -1,0 +1,36 @@
+#chat-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#chat-history {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.user {
+  color: blue;
+}
+
+.model {
+  color: green;
+}
+
+#user-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+#user-message {
+  flex: 1;
+  margin-right: 10px;
+}
+
+button {
+  cursor: pointer;
+}
