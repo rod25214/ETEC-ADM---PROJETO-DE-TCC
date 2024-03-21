@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini API Example</title>
+</head>
+<body>
+  <div>
+    <label for="textInput">Digite algo:</label>
+    <input type="text" id="textInput">
+    <button onclick="generateText()">Gerar Texto</button>
+  </div>
+
+  <div id="output">
+    <h3>Resultado:</h3>
+    <p id="resultText"></p>
+  </div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+      }
+    }
+  </script>
+  <script type="module" defer>
+    import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from "@google/generative-ai";
+
+    const API_KEY = 'AIzaSyDetBt9lggvavVTWteoC7LECo8l1SwPMsA';
+    const genAI = new GoogleGenerativeAI(API_KEY);
+
+    let chatHistory = [];
+
+    window.generateText = async function () {
+      const inputText = document.getElementById('textInput').value;
+      const outputTextElement = document.getElementById('resultText');
+
+      const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+
+      try {
+        const chat = model.startChat({
+          generationConfig: {
+            temperature: 0.9,
+            topK: 1,
+            topP: 1,
+            maxOutputTokens: 2048,
+          },
+          safetySettings: [
+            { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
+            { category: HarmCategory.HARM_CATEGORY_HATE_SPEECH, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
+            { category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
+            { category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
+          ],
+          history: chatHistory,
+        });
+
+        const result = await chat.sendMessage(inputText);
+        const response = await result.response;
+        const text = response.text();
+
+        chatHistory.push({ role: "user", parts: [{ text: inputText }] });
+        chatHistory.push({ role: "model", parts: [{ text }] });
+
+        outputTextElement.innerText = text;
+      } catch (error) {
+        console.error('Erro ao gerar texto:', error);
+        outputTextElement.innerText = 'Erro ao gerar texto. Verifique o console para mais detalhes.';
+      }
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style-balanço copy.css" />
+    <script src="js/balanço.js"></script>
+   </head>
+      <body>
+        <div class="TV">
+          <div class="div">
+            <div class="menu-lateral">
+          
+              <div class="focus-seleção" onclick="redirecionar('seuproduto.html')">
+                <div class="overlap-group"><img class="cone-produtos" src="img/Ícone Produtos.png" /></div>
+              </div>
+            
+              <div class="f1">
+                <img class="cone-abrir-painel" src="img/Ícone Abrir Painel Lateral.png" />
+              </div>
+            
+              <div class="f2" onclick="redirecionar('visao-geral.html')">
+                <img class="cone-viso-geral" src="img/Ícone Visão Geral.png" />
+              </div> 
+            
+              <div class="f3" onclick="redirecionar('home.html')">
+                <img class="cone-home" src="img/home.png" />
+              </div>
+            
+              <div class="f4" onclick="redirecionar('contabilidade.html')">
+                <img class="cone-grfico-linha" src="img/Ícone Gráfico Linha.png" />
+              </div>
+            
+              <div class="f5" onclick="redirecionar('index.html')">
+                <img class="cone-pessoa" src="img/Ícone Pessoa.png" />
+              </div>
+            
+              <div class="f6" onclick="redirecionar('pagina7.html')">
+                <img class="icone-engrenagem" src="img/Icone Engrenagem.png" />
+              </div>
+              <img class="dummy-icon" src="img/Image 23.png" />
+            </div>
+            <div class="content">
+            <div class="blur">
+              <div class="view">
+                <h1 class="vendo">Esta vendo o</h1>
+                <h1 class="esta-vendo">Balanço Patrimonial</h1>
+                <h1 id="anoAtual" class="ano">2023</h1>
+              </div>
+            <div class="filtro">
+              <button class="confirmar"><img class="icone-confirma" src="img/verifica.png"></button>
+              <button class="adiciona"><img class="icone-adiciona" src="img/mais.png"></button>
+
+              <div class="container">
+                <label class="selectYear-text" for="selectYear">Ano:</label>
+                <select id="selectYear">
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                  <option value="2030">2030</option>
+                  <option value="2031">2031</option>
+                  <option value="2032">2032</option>
+                  <option value="2033">2033</option>
+                  
+                </select>
+              </div>
+            </div>
+
+            <div class="overlap">
+              <div class="rectangle">
+                <table class="styled-table">
+                  <thead>
+                    <tr>
+                      <th colspan="4">Passivo Não Circulante</th>
+                    </tr>
+                    <tr>
+                      <th>Nº</th>
+                      <th>Nome</th>
+                      <th>Descrição</th>
+                      <th>Valor</th>
+                    </tr>
+                  </thead>
+                  <tbody id="Passivo Não Circulante">
+
+                  </tbody>
+                </table>
+              </div>
+              <div class="rectangle-2">
+                <table class="styled-table">
+                  <thead>
+                    <tr>
+                      <th colspan="4">Ativo Circulante</th>
+                    </tr>
+                    <tr>
+                      <th>Nº</th>
+                      <th>Nome</th>
+                      <th>Descrição</th>
+                      <th>Valor</th>
+                    </tr>
+                  </thead>
+                  <tbody id="Ativo Circulante">
+                  </tbody>
+                </table>
+              </div>
+              <div class="rectangle-3">
+                <table class="styled-table">
+                  <thead>
+                    <tr>
+                      <th colspan="4">Ativo Não Circulante</th>
+                    </tr>
+                    <tr>
+                      <th>Nº</th>
+                      <th>Nome</th>
+                      <th>Descrição</th>
+                      <th>Valor</th>
+                    </tr>
+                  </thead>
+                  <tbody id="Ativo Não Circulante">
+
+                  </tbody>
+                </table>
+              </div>
+              <div class="rectangle-4">
+                <table class="styled-table">
+                  <thead>
+                    <tr>
+                      <th colspan="4">Passivo Circulante</th>
+                    </tr>
+                    <tr>
+                      <th>Nº</th>
+                      <th>Nome</th>
+                      <th>Descrição</th>
+                      <th>Valor</th>
+                    </tr>
+                  </thead>
+                  <tbody id="Passivo Circulante">
+
+                  </tbody>
+                </table>
+              </div>
+              <div class="rectangle-5">
+                <table class="styled-table">
+                  <thead>
+                    <tr>
+                      <th colspan="4">Patrimonio Líquido</th>
+                    </tr>
+                    <tr>
+                      <th>Nº</th>
+                      <th>Nome</th>
+                      <th>Descrição</th>
+                      <th>Valor</th>
+                    </tr>
+                  </thead>
+                  <tbody id="Patrimonio Líquido">
+                 
+                  </tbody>
+                </table>
+              </div>
+
+              <img class="line" src="img/line 28.png" />
+
+              <div class="group">
+                <div class="div-wrapper">
+                  
+                  <div class="text-wrapper">Total do AC</div></div>
+              </div>
+              <div class="overlap-wrapper">
+                <div class="div-wrapper"><div class="text-wrapper-2">Total do ANC</div></div>
+              </div>
+              <div class="overlap-group-wrapper">
+                <div class="overlap-2"><div class="text-wrapper-3">Total do Ativo</div></div>
+              </div>
+              <div class="group-2">
+                <div class="overlap-3"><div class="text-wrapper-4">Total do PC</div></div>
+              </div>
+              <div class="group-3">
+                <div class="overlap-3"><div class="text-wrapper-5">Total do PNC</div></div>
+              </div>
+              <div class="group-4">
+                <div class="overlap-4"><div class="text-wrapper-6">Total do PL</div></div>
+              </div>
+              <div class="group-5">
+                <div class="overlap-5"><div class="text-wrapper-5">Total Passivo</div></div>
+              </div>
+            </div>
+
+            <div class="group-6">
+              <div class="overlap-6" onclick="redirecionar('contabilidade.html')">
+                <div class="rectangle-6">
+                <div class="text-wrapper-7">Balanço Patrimonial</div>
+                <img class="vector" src="img/vector 10.png" />
+              </div>
+              </div>
+            </div>
+            </div>
+
+          </div>
+          </div>
+        </div>
+      </body>
+    </html>
+    

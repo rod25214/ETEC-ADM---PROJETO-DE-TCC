@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/ad-f.css" />
+    <script src="js/ad-f.js"></script>
+    <title>Editar Produto</title>
+  </head>
+  <body>
+    <div class="TV">
+      <div class="div">
+        <div class="menu-lateral">
+          
+          <div class="focus-seleção" onclick="redirecionar('seuproduto.html')">
+            <div class="overlap-group"><img class="cone-produtos" src="img/Ícone Produtos.png" /></div>
+          </div>
+        
+          <div class="f1">
+            <img class="cone-abrir-painel" src="img/Ícone Abrir Painel Lateral.png" />
+          </div>
+        
+          <div class="f2" onclick="redirecionar('visao-geral.html')">
+            <img class="cone-viso-geral" src="img/Ícone Visão Geral.png" />
+          </div>
+        
+          <div class="f3" onclick="redirecionar('home.html')">
+            <img class="cone-home" src="img/home.png" />
+          </div>
+        
+          <div class="f4" onclick="redirecionar('contabilidade.html')">
+            <img class="cone-grfico-linha" src="img/Ícone Gráfico Linha.png" />
+          </div>
+        
+          <div class="f5" onclick="redirecionar('index.html')">
+            <img class="cone-pessoa" src="img/Ícone Pessoa.png" />
+          </div>
+        
+          <div class="f6" onclick="redirecionar('pagina7.html')">
+            <img class="icone-engrenagem" src="img/Icone Engrenagem.png" />
+          </div>
+          <img class="dummy-icon" src="img/Image 23.png" />
+        </div>
+        <div class="group-a">
+          <div class="overlap-a" onclick="redirecionar('home.html')">
+            <div class="rectangle-a">
+            <div class="text-wrapper-a">Novo Cliente</div>
+            <img class="vector" src="img/vector 10.png" />
+          </div>
+          </div>
+        </div>
+        <div class="bell-wrapper"><img class="bell" src="img/bell 1.png" /></div>
+        <div class="overlap">
+          <div class="group">
+            <div class="div-wrapper">
+               <button id="salvarBtn" class="salvarBtn" onclick="salvarFuncionario()">Salvar</button>
+            </div>
+          </div>
+
+          <p3 class="AVISO-FIXO">*Informe todas opções para continuar e salvar...</p3>
+
+          <div class="overlap-2">
+            <label for="inputImagem" class="custom-button" title="Toque para trocar ou adicionar imagem"></label>
+            <input type="file" id="inputImagem" accept="image/*" />
+            <img class="image" src="img/Image.png" />
+            <img class="download" src="img/Download.png" />
+            <p class="p">*OPCIONAL - Coloque a foto do cliente aqui!</p>
+          </div>
+          <input type="file" id="inputDocumento" accept=".pdf,.doc,.docx" style="display:none">
+          <button class="botao-2" onclick="anexarDocumento()" onmouseout="mudarTextoBotao('Anexar Currículo')" onmouseout="mudarTextoBotao('Anexar PDF ou Word')">Anexar PDF ou Word</button>
+          <a id="linkVisualizar" style="display:none" download="curriculo.pdf">Baixar Currículo</a>
+          <button class="botao-1" onclick="visualizarCurriculo()">Baixar Currículo Anexado</button>
+          <input type="text" class="nome-produto" placeholder="Nome Completo do cliente">
+          <button class="botao-trocar" onclick="trocarTipo()"><h1 class="a1a">Caso não pareça a função desejada toque aqui</h1></button>
+          <select class="ad-f-select" placeholder="Select">
+            <option value="01">Vendedor</option>
+          </select>
+          <input type="text" class="descrição-produto" placeholder="Endereço do cliente">
+
+          <div class="rectangle"></div>
+          <div class="overlap-3">
+            <div class="group-2">
+              <div class="overlap-4">
+                <input type="text" class="valor-produto" placeholder="(xx) xxxxx-xxxx">
+              </div>
+              <div class="text-wrapper-5">Número de Contato:</div>
+            </div>
+            <input type="text" class="Quantidade-estoque" placeholder="dd/mm/aaaa" pattern="\d{2}/\d{2}/\d{4}" oninput="formatarData(this)">
+            <div class="text-wrapper-7">Cliente desde:</div>
+          </div>
+          <div class="text-wrapper-9">Status do cliente:</div>
+
+          
+          <div class="overlap-6">
+            <button class="botao-3">Informações de Contato</button>  
+            <button class="botao-3">Informações / Documentos</button>  
+            <button class="botao-3">Competencias e Habilidades</button>
+            <button class="botao-3">Recomendações Passadas</button>  
+            <button class="botao-3">Certificados e Cursos</button>  
+            <button class="botao-3">Trajeto na Empresa</button>  
+            <button class="botao-3">Ponto (Entradas e Saídas)</button>  
+            <button class="botao-3">Faltas Acumuladas</button>  
+            <button class="botao-3">Gráficos do Funcionário</button>  
+            <button class="botao-3">Grau de Acesso no APP</button>
+            <button class="botao-3">Congurações Avançadas</button>  
+          </div>
+          <div class="overlap-7">
+            <div class="tabela-scroll"> 
+              <table class="styled-table" id="estoque-tabela"> 
+                <thead>
+                  <tr>
+                    <th>Nº</th>
+                    <th>Código</th>
+                    <th>Nome do produto</th>
+                    <th>Descrição</th>
+                    <th>Quantidade comprada</th>
+                    <th>Valor da compra</th>
+                  </tr>
+                </thead>
+                <tbody id="tabelaCorpo">
+    
+                </tbody>
+              </table>
+              </div>
+          </div>
+          <div class="overlap-5">
+            <select class="Custo-produto" placeholder="Select">
+              <option value="05">Cliente Fiel</option>
+              <option value="01">Cliente Temporário</option>
+            </select>
+          </div>
+        </div>
+        <div class="seleção">
+
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

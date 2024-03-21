@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style-home.css" />
+    <script src="js/home.js"></script>
+  </head>
+  <body>
+    <div class="TV">
+      <div class="div">
+        <div class="menu-lateral">
+          
+          <div class="focus-seleção" onclick="redirecionar('seuproduto.html')">
+            <div class="overlap-group"><img class="cone-produtos" src="img/Ícone Produtos.png" /></div>
+          </div>
+        
+          <div class="f1">
+            <img class="cone-abrir-painel" src="img/Ícone Abrir Painel Lateral.png" />
+          </div>
+        
+          <div class="f2" onclick="redirecionar('visao-geral.html')">
+            <img class="cone-viso-geral" src="img/Ícone Visão Geral.png" />
+          </div> 
+        
+          <div class="f3" onclick="redirecionar('home.html')">
+            <img class="cone-home" src="img/home.png" />
+          </div>
+        
+          <div class="f4" onclick="redirecionar('contabilidade.html')">
+            <img class="cone-grfico-linha" src="img/Ícone Gráfico Linha.png" />
+          </div>
+        
+          <div class="f5" onclick="redirecionar('index.html')">
+            <img class="cone-pessoa" src="img/Ícone Pessoa.png" />
+          </div>
+        
+          <div class="f6" onclick="redirecionar('pagina7.html')">
+            <img class="icone-engrenagem" src="img/Icone Engrenagem.png" />
+          </div>
+          <button class="IA" id="IA">IA</button>
+          <img class="dummy-icon" src="img/Image 23.png" />
+        </div>
+      
+
+        <div class="fundo-blur"><div class="IA-fundo">
+          <div id="deltIA" class="delt-IA"><img id="voltarAoNormal" src="img/cancelar.png" class="cancelar" /></div>
+          
+          <div class="history-tamanho">
+          <div id="history">
+            <div class="button-container">
+            <button class="bt1">Analizar tabela existente</button>
+            <button class="bt1">Ideias de novos produtos</button>
+            </div>
+
+            <div class="button-container">
+            <button class="bt1">Fazer lista de compras</button>
+            <button class="bt1">Memória fixa da IA</button>
+            </div>
+          </div>
+          </div>
+          <div class="line-IA"></div>
+          <input type="text" id="textInput" placeholder="Digite o promt..." class="IA-Input-c">
+          <button class="confirm-IA" id="btn-submit" onclick="generateText()">OK</button>
+          <button class="mais-IA" id="mais-submit"><img class="mais-p" src="img/voltar.png" /></button>
+          <div class="bt-g">
+            <div class="bt2">Analizar tabela existente</div>
+            <div class="bt3">Ideias de produtos</div>
+            <div class="bt4">Fazer lista de compras</div>
+            <div class="bt5">Memória fixa da IA</div>
+            <div class="bt6">Baixar conversa atual</div>
+          </div>
+        </div>
+        </div>
+        <div class="blur">
+        <div class="bell-wrapper"><img class="bell" src="img/menu-hamburguer (1).png" /></div>
+        <div class="text-wrapper">Olá, Bem-vindo ao YOURCOMPANY 2.0</div>
+
+        <div class="ajust">
+          <div class="botões">
+            <button class="geral">Geral</button>
+            <button class="postagem">Post Programado</button>
+            <button class="Avisos">Aviso Importante</button>        
+            <button class="novo-aviso" onclick="redirecionar('Venda.html')">Vender Produtos</button>
+            <button class="abrir-calendario"  onclick="redirecionar('Vendas.html')">Gerenciar Entradas e Saídas</button>  
+          </div>
+          <div class="group-16">
+            <div class="overlap-14">
+              </div>
+              <div class="overlap-15">
+              </div>
+          </div>
+        </div>
+  
+
+
+        <div class="seleção">
+        <div class="Micro-RH" onclick="redirecionar('rh.html')">
+          <div class="text-micro-RH">Micro RH</div>
+          <div class="funcionarios">
+            <img class="funcionario-1" src="" />
+            <img class="funcionario-2" src="" />
+            <img class="funcionario-3" src="" />
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+
+      <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
+      <script type="module" defer>
+        import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from "@google/generative-ai";
+    
+        const API_KEY = 'AIzaSyDetBt9lggvavVTWteoC7LECo8l1SwPMsA';
+        const genAI = new GoogleGenerativeAI(API_KEY);
+    
+        let chatHistory = [];
+    
+        window.generateText = async function () {
+          const inputText = document.getElementById('textInput').value;
+          const outputTextElement = document.getElementById('resultText');
+    
+          const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+    
+            var message = document.getElementById('textInput')
+    if(!message.value)
+    {
+        message.style.border = '1px solid red'
+        return;
+    }
+    message.style.border = 'none'
+    var btnSubmit = document.getElementById('btn-submit')
+    
+    btnSubmit.disabled = true
+    btnSubmit.style.cursor = 'not-allowed'
+    message.disabled = true
+    message.style.cursor = 'not-allowed'
+
+          try {
+            const chat = model.startChat({
+              generationConfig: {
+                temperature: 0.5,
+                topK: 1,
+                topP: 1,
+                maxOutputTokens: 2048,
+              },
+              safetySettings: [
+                { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
+                { category: HarmCategory.HARM_CATEGORY_HATE_SPEECH, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
+                { category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
+                { category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
+              ],
+              history: chatHistory,
+            });
+    
+            const result = await chat.sendMessage(inputText);
+            const response = await result.response;
+            const text = response.text();
+    
+            chatHistory.push({ role: "user", parts: [{ text: inputText }] });
+            chatHistory.push({ role: "model", parts: [{ text }] })
+          showHistory(inputText, text);
+
+    const buttonContainers = document.querySelectorAll('.button-container');
+    buttonContainers.forEach(container => {
+      container.style.display = 'none';
+    });
+          } 
+          catch (error) {
+            console.error('Erro ao gerar texto:', error);
+          }
+
+          finally {
+        btnSubmit.disabled = false
+        btnSubmit.style.cursor = 'default'
+        message.disabled = false
+        message.style.cursor = 'auto'
+        message.value = ''
+    }
+        };
+
+        function showHistory(message,response){
+    var historyBox = document.getElementById('history')
+
+    // My message
+    var boxMyMessage = document.createElement('div')
+    boxMyMessage.className = 'box-my-message'
+
+    var myMessage = document.createElement('p')
+    myMessage.className = 'my-message'
+    myMessage.innerHTML = message
+
+    boxMyMessage.appendChild(myMessage)
+
+    historyBox.appendChild(boxMyMessage)
+
+    // Response message
+    var boxResponseMessage = document.createElement('div')
+    boxResponseMessage.className = 'box-response-message'
+
+    var chatResponse = document.createElement('p')
+    chatResponse.className = 'response-message'
+    chatResponse.innerHTML = response
+
+    boxResponseMessage.appendChild(chatResponse)
+
+    historyBox.appendChild(boxResponseMessage)
+
+    // Levar scroll para o final
+    historyBox.scrollTop = historyBox.scrollHeight
+}
+
+
+      </script>
+  </body>
+</html>

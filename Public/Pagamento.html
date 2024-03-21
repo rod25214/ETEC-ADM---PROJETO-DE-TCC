@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/Pagamento.css" />
+    <script src="js/Pagamento.js"></script>
+  </head>
+  <body>
+    <div class="TV">
+
+      <div class="div">
+        <div class="menu-lateral">
+          
+          <div class="focus-seleção" onclick="redirecionar('seuproduto.html')">
+            <div class="overlap-group"><img class="cone-produtos" src="img/Ícone Produtos.png" /></div>
+          </div>
+        
+          <div class="f1">
+            <img class="cone-abrir-painel" src="img/Ícone Abrir Painel Lateral.png" />
+          </div>
+        
+          <div class="f2" onclick="redirecionar('visao-geral.html')">
+            <img class="cone-viso-geral" src="img/Ícone Visão Geral.png" />
+          </div> 
+        
+          <div class="f3" onclick="redirecionar('home.html')">
+            <img class="cone-home" src="img/home.png" />
+          </div>
+        
+          <div class="f4" onclick="redirecionar('contabilidade.html')">
+            <img class="cone-grfico-linha" src="img/Ícone Gráfico Linha.png" />
+          </div>
+        
+          <div class="f5" onclick="redirecionar('index.html')">
+            <img class="cone-pessoa" src="img/Ícone Pessoa.png" />
+          </div>
+        
+          <div class="f6" onclick="redirecionar('pagina7.html')">
+            <img class="icone-engrenagem" src="img/Icone Engrenagem.png" />
+          </div>
+          <img class="dummy-icon" src="img/Image 23.png" />
+        </div>
+
+<div class="blur">
+  <div class="group-6">
+    <div class="overlap-6">
+      <a href="Venda.html">
+      <div class="rectangle-6">
+      <div class="text-wrapper-7">Formas de Pagamento</div>
+      <img class="vector" src="img/vector 10.png" />
+    </div>
+  </a>
+    </div>
+</div>
+<button class="finalizar" onclick="redirecionarOuAlerta()">Finalizar Pagamento</button>
+<button class="delet">Limpar Pagamentos Realizados</button>
+<div class="overlap">
+  <div class="quadrado-1">
+    <div class="dinheiro">
+      <h1 class="titulo">Dinheiro</h1>
+      <p class="p">ffffffkkrrrrr</p>
+      <button class="botao-1" onclick="ocultarElementos(); moverParaBaixo();">Pagamento em Dinheiro</button>
+    </div>
+    <div class="line-3"></div>
+    <div class="pix">
+      <h1 class="titulo">Pix</h1>
+      <p class="p"> ffffffkkrrrrr</p>
+      <button class="botao-1" onclick="ocultarElementos3(); moverParaBaixo();">Pagamento em Pix</button>
+    </div>
+  </div>
+  <div class="quadrado-2">
+    <div class="cartao">
+      <h1 class="titulo2">Cartão de Débito</h1>
+      <p class="p2"> ffffffkkrrrrr</p>
+      <button class="botao-2" onclick="ocultarElementos1(); moverParaBaixo();">Pagamento pelo Cartão de Débito</button>
+    </div>
+  </div>
+  <div class="quadrado-3">
+    <div class="cartao">
+      <h1 class="titulo2">Cartão de Crédito</h1>
+      <p class="p2"> ffffffkkrrrrr</p>
+      <button class="botao-2" onclick="ocultarElementos2(); moverParaBaixo();">Pagamento pelo Cartão de Crédito</button>
+    </div>
+  </div>
+  <div class="line"></div>
+  <div class="tabela-paga">
+    <img id="voltarAoNormal" src="img/cancelar.png" class="cancelar" style="display: none;" onclick="voltarAoNormal();" />
+  <div class="lista" id="lista">          
+    <div class="barra-rolagem">
+    <table class="styled-table" id="tabelaItens">
+      <thead>
+        <tr>
+          <th colspan="6">Lista de produtos</th>
+        </tr>
+        <tr>
+          <th>Nº</th>
+          <th>Codigo</th>
+          <th>Item</th>
+          <th>Valor Uni.</th>
+          <th>Quantidade Vendida</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaCorpo">
+
+      </tbody>
+    </table>
+  </div>
+</div>
+  <div class="pagar" id="pagar"><h1 class="text-v">Valor da compra:</h1>
+    <h1 class="text-val">R$ 0,00</h1>
+  </div>
+  <div class="line2" id="line2"></div>
+  <div class="formas" id="formas">
+    <div class="barra-rolagem-1">
+      <table class="styled-table-1" id="tabelaFormasPagamento">
+        <thead>
+          <tr>
+            <th colspan="5">Pagamento Realizados</th>
+          </tr>
+          <tr>
+            <th>Nº</th>
+            <th>Descrição</th>
+            <th>Pago No</th>
+            <th>Valor</th>
+            <th>Data e Hora</th>
+          </tr>
+        </thead>
+        <tbody id="tabelaCorpo-1">
+  
+        </tbody>
+      </table>
+    </div>
+  
+  </div>
+  <div class="pago">
+  <h1 class="text-p">Valor Pago:</h1>
+  <h1 class="text-va">R$ 0,00</h1>
+  </div>
+  <div class="troco"><h1 class="text-p">Troco:</h1> <h1 class="text-va1">R$ 0,00</h1></div>
+</div>
+       </div>
+
+
+    </div>
+    </div>
+  </body>
+</html>

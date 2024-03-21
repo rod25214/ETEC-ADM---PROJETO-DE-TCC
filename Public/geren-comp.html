@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/geren.css" />
+    <script src="js/geren.js"></script>
+   </head>
+      <body>
+        <div class="TV">
+          <div class="div">
+            <div class="menu-lateral">
+          
+              <div class="focus-seleção" onclick="redirecionar('seuproduto.html')">
+                <div class="overlap-group"><img class="cone-produtos" src="img/Ícone Produtos.png" /></div>
+              </div>
+            
+              <div class="f1">
+                <img class="cone-abrir-painel" src="img/Ícone Abrir Painel Lateral.png" />
+              </div>
+            
+              <div class="f2" onclick="redirecionar('visao-geral.html')">
+                <img class="cone-viso-geral" src="img/Ícone Visão Geral.png" />
+              </div> 
+            
+              <div class="f3" onclick="redirecionar('home.html')">
+                <img class="cone-home" src="img/home.png" />
+              </div>
+            
+              <div class="f4" onclick="redirecionar('contabilidade.html')">
+                <img class="cone-grfico-linha" src="img/Ícone Gráfico Linha.png" />
+              </div>
+            
+              <div class="f5" onclick="redirecionar('index.html')">
+                <img class="cone-pessoa" src="img/Ícone Pessoa.png" />
+              </div>
+            
+              <div class="f6" onclick="redirecionar('pagina7.html')">
+                <img class="icone-engrenagem" src="img/Icone Engrenagem.png" />
+              </div>
+              <img class="dummy-icon" src="img/Image 23.png" />
+            </div>
+            <div class="content">
+            <div class="blur">
+
+
+            <div class="overlap">
+
+                   <button id="salvarBtn" class="salvarBtn">Salvar novo registro...</button>
+
+              <h1 class="text-fixo">Pesquise o produto para registrar</h1>
+              <h1 class="text-fixo-2">Procurar produto pelo nome...</h1>
+              <h1 class="text-fixo-3">Procurar produto pelo codigo...</h1>
+              <h1 class="text-fixo-4">Procurar produto pela descrição...</h1>
+              <div class="line-f"></div>
+              <h1 class="text-fixo2">Informações atuais do produto encontrado</h1>
+              <h1 class="text-fixo-5">Preço de Venda</h1>
+              <div class="lu1"><div class="text-wrapper-preço"></div></div>
+              <h1 class="text-fixo-6">Quantidade em estoque</h1>
+              <div class="lu2"><div class="text-wrapper-estoque"></div></div>
+              <h1 class="text-fixo-7">Custo unitário</h1>
+              <div class="lu3"><div class="text-wrapper-custo"></div></div>
+              <div class="line-f-2"></div>
+              <h1 class="text-fixo3">Informações para registro da compra</h1>
+              <div class="line-f-3"><button class="regis-b" onclick="registrarNaLista()">Registrar na lista</button></div>       
+              <h1 class="text-fixo-8">Novo Preço de Venda</h1>
+              <input type="text" class="lug-i1" id="lug-i1-Input" placeholder="Escreva novo preço...">
+              <h1 class="text-fixo-9">Quantidade comprada</h1>
+              <input class="lug-i2" id="lug-i2-Input" placeholder="Escreva a quantidade..." type="number">              <h1 class="text-fixo-4">Procurar produto pela descrição...</h1>
+              <h1 class="text-fixo-10">Custo unitário comprado</h1>
+              <input type="text" class="lug-i3" id="lug-i3-Input" placeholder="Escreva o custo unitário...">       
+              <div class="foto">          
+              <div class="tabela-scroll"> 
+                <table class="styled-table" id="compra-tabela"> 
+                  <thead>
+                    <tr>
+                      <th colspan="6">Lista da compra</th>
+                    </tr>
+                    <tr>
+                      <th>Nº</th>
+                      <th>Codigo</th>
+                      <th>Nome</th>
+                      <th>Custo Unit.</th>
+                      <th>Quant.</th>
+                      <th>Total</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tabelaCorpo-compra">
+    
+                  </tbody>
+                </table>
+                </div></div>
+              <div class="codigo-lugar"><button class="generated-button" onclick="createProtDiv3()">Procurar pelo estoque</button><button class="generated-button2">Mudar quantidade</button><button class="generated-button3">Deletar item</button></div>
+              <input type="text" class="nome" id="nomeprodutoInput" placeholder="Nome do produto...">
+              <button class="button-p-n" onclick="createProtDiv2()"><img class="l1" src="img/search 1.png"/></button>
+              <input type="text" class="codigo" id="codigoInput" placeholder="Código do produto...">
+              <button class="button-p-c" onclick="createProtDiv1()"><img class="l1" src="img/search 1.png"/></button>
+              <input type="text" class="descricao" id="descricaoInput" placeholder="Descrição do produto...">
+              <button class="button-p-d" onclick="createProtDiv()"><img class="l1" src="img/search 1.png"/></button>
+</div>
+
+
+
+            <div class="group-6">
+              <div class="overlap-6" onclick="redirecionar('contabilidade.html')">
+                <div class="rectangle-6">
+                <div class="text-wrapper-7">Registrar Compra</div>
+                <img class="vector" src="img/vector 10.png" />
+              </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </body>
+    </html>

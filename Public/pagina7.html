@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Tabela de Estoque (UEPS)</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Nome</th>
+        <th>Quantidade</th>
+        <th>Custo Unitário</th>
+        <th>Data/Hora</th>
+      </tr>
+    </thead>
+    <tbody id="estoqueTableBody">
+      <!-- Dados da tabela serão adicionados dinamicamente usando JavaScript --><div class="mold-geren"><button class="geren-v">Gerenciar v</button><button class="geren-c">Gerenciar c</button><div class="mold-ponta"></div></div>
+    </tbody>
+  </table>
+
+  <script>
+    // Dados de exemplo (substitua pelos seus dados reais)
+    const estoqueData = {
+      "listaCompras": [
+        {"codigo": "3CSX2ZBQJ6", "nome": "s", "quantidadeComprada": "8", "custoUnitarioComprado": "6", "dataHora": "14/02/2024, 15:08:31"},
+        // Adicione outros itens conforme necessário
+      ]
+    };
+
+    // Função para popular a tabela com os dados do estoque
+    function popularTabelaEstoque() {
+      const tabelaBody = document.getElementById("estoqueTableBody");
+
+      estoqueData.listaCompras.forEach(item => {
+        const row = tabelaBody.insertRow();
+        row.insertCell(0).textContent = item.codigo;
+        row.insertCell(1).textContent = item.nome;
+        row.insertCell(2).textContent = item.quantidadeComprada;
+        row.insertCell(3).textContent = item.custoUnitarioComprado;
+        row.insertCell(4).textContent = item.dataHora;
+      });
+    }
+
+    // Chame a função para popular a tabela quando a página carregar
+    window.onload = popularTabelaEstoque;
+  </script>
+
+</body>
+</html>

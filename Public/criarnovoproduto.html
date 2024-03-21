@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/criarnovoproduto.css" />
+    <script src="js/criarnovoproduto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+ 
+    <div class="TV">
+      <div class="div">
+        <div class="menu-lateral">
+          
+          <div class="focus-seleção" onclick="redirecionar('seuproduto.html')">
+            <div class="overlap-group"><img class="cone-produtos" src="img/Ícone Produtos.png" /></div>
+          </div>
+        
+          <div class="f1">
+            <img class="cone-abrir-painel" src="img/Ícone Abrir Painel Lateral.png" />
+          </div>
+        
+          <div class="f2" onclick="redirecionar('visao-geral.html')">
+            <img class="cone-viso-geral" src="img/Ícone Visão Geral.png" />
+          </div> 
+        
+          <div class="f3" onclick="redirecionar('home.html')">
+            <img class="cone-home" src="img/home.png" />
+          </div>
+        
+          <div class="f4" onclick="redirecionar('contabilidade.html')">
+            <img class="cone-grfico-linha" src="img/Ícone Gráfico Linha.png" />
+          </div>
+        
+          <div class="f5" onclick="redirecionar('index.html')">
+            <img class="cone-pessoa" src="img/Ícone Pessoa.png" />
+          </div>
+        
+          <div class="f6" onclick="redirecionar('pagina7.html')">
+            <img class="icone-engrenagem" src="img/Icone Engrenagem.png" />
+          </div>
+          <img class="dummy-icon" src="img/Image 23.png" />
+        </div>
+        <div class="bell-wrapper"><img class="bell" src="img/menu-hamburguer (1).png" /></div> 
+        <div class="blur">
+          <div class="group-a">
+            <div class="overlap-a" onclick="redirecionar('seuproduto.html')">
+              <div class="rectangle-a">
+              <div class="text-wrapper-a">Informações do produto</div>
+              <img class="vector" src="img/vector 10.png" />
+            </div>
+            </div>
+          </div>
+        <div class="overlap">
+          <div class="lugar-cod">
+            <div class="text-wrapper-cod"></div>
+          </div>
+          <div class="overlap-2">
+            <img class="image" src="img/Image.png" />
+            <img class="download" src="img/Download.png" />
+            <p class="p">Coloque a foto do seu</p>
+            <p class="p2">produto aqui!</p>
+          </div>
+          <div class="text-wrapper-2"></div>
+          <p class="lorem-ipsum-is">
+          </p>
+          <div class="rectangle"></div>
+          <div class="overlap-3">
+            <div class="group">
+              <div class="overlap-4">
+                <div class="rectangle-2"></div>
+                <div class="text-wrapper-4"></div>
+              </div>
+              <div class="text-wrapper-5">Valor do produto (unitário)</div>
+            </div>
+            <div class="rectangle-3"></div>
+            <div class="text-wrapper-6"></div>
+            <div class="text-wrapper-7">Quantidade em estoque</div>
+          </div>
+          <div class="overlap-5">
+            <div class="rectangle-2"></div>
+            <div class="text-wrapper-12"></div>
+          </div>
+          <div class="text-wrapper-9">Custo do produto</div>
+          <div class="div-wrapper"><canvas id="graficoBarra" class="grafico"></canvas><div class="text-wrapper-10"></div></div>
+          <div class="overlap-6">
+            <div class="tabela-venda">        
+              <div class="barra-rolagem">
+              <table class="styled-table" id="tabela-venda1">
+                <thead>
+                  <tr>
+                    <th colspan="4">Vendas realizadas do produto (no mês)</th>
+                  </tr>
+                  <tr>
+                    <th>Nº</th>
+                    <th>Valor un. Vendido</th>
+                    <th>Quantidade Vendida</th>
+                    <th>Data da Venda</th>
+                  </tr>
+                </thead>
+                <tbody>
+    
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="line-4"></div>
+          <div class="tabela-forne">
+            <div class="barra-rolagem">
+              <table class="styled-table">
+                <thead>
+                  <tr>
+                    <th colspan="3">Fornecedores desse produto</th>
+                  </tr>
+                  <tr>
+                    <th>Nº</th>
+                    <th>Nome</th>
+                    <th>Preço do produto no fornecedor</th>
+                  </tr>
+                </thead>
+                <tbody>
+    
+                </tbody>
+              </table>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="seleção" onclick="editarProduto('editarnovop copy.html')">
+          <img class="engrenagem" src="img/processo.png" />
+          <p class="texto-config">Toque aqui para Editar ou Excluir o produto</p>
+      </div>
+      </div>
+         
+    </div>
+    </div>
+    <div class="fora">   
+      <table id="tabelaRelatorio">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nome do Item</th>
+          <th>Valor Unitário</th>
+          <th>Quantidade Vendida</th>
+          <th>Total</th>
+          <th>Data e Hora</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dados serão adicionados dinamicamente aqui -->
+      </tbody>
+    </table>
+  </div>
+  <div class="fora2">
+    <table id="inform">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Valor de venda</th>
+          <th>Quantidade em estoque</th>
+          <th>Custo do produto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dados serão adicionados dinamicamente aqui -->
+      </tbody>
+    </table>
+  </div>
+  <script>
+    var ctx = document.getElementById("graficoBarra").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"], // Adicione seus rótulos aqui
+        datasets: [
+          {
+            label: "Dia",
+            data: [10, 20, 30, 300], // Adicione seus dados aqui
+            backgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(255, 206, 86, 0.2)"],
+            borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)", "rgba(255, 206, 86, 1)"],
+            borderWidth: 1,
+          },
+          {
+            label: "Mês",
+            data: [50, 60, 70, 80], // Adicione seus dados aqui
+            backgroundColor: ["rgba(75, 192, 192, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)"],
+            borderColor: ["rgba(75, 192, 192, 1)", "rgba(255, 159, 64, 1)", "rgba(255, 205, 86, 1)"],
+            borderWidth: 1,
+          },
+          {
+            label: "Hora do Dia",
+            data: [5, 10, 15, 20], // Adicione seus dados aqui
+            backgroundColor: ["rgba(153, 102, 255, 0.2)", "rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)"],
+            borderColor: ["rgba(153, 102, 255, 1)", "rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
+            borderWidth: 1,
+          },
+          {
+            label: "teste",
+            data: [5, 10, 15, 20], // Adicione seus dados aqui
+            backgroundColor: ["rgba(153, 102, 255, 0.2)", "rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)"],
+            borderColor: ["rgba(153, 102, 255, 1)", "rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
+            borderWidth: 1,
+          },
+        ],
+      },
+    });
+  </script>
+  </body>
+</html>

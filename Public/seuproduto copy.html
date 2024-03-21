@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="CSS/seuproduto.css" />
+    <script src="js/seuproduto.js"></script>
+    <title>Seus Produtos</title> 
+  </head>
+  <body>
+    <div class="fora">   
+      <table id="tabelaRelatorio">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nome do Item</th>
+          <th>Valor Unitário</th>
+          <th>Quantidade Vendida</th>
+          <th>Total</th>
+          <th>Data e Hora</th>
+          <th>Concluido</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dados serão adicionados dinamicamente aqui -->
+      </tbody>
+    </table>
+  </div>
+
+    <div class="TV">
+      <div class="div">
+        <div class="menu-lateral">
+          
+          <div class="focus-seleção" onclick="redirecionar('seuproduto.html')">
+            <div class="overlap-group"><img class="cone-produtos" src="img/Ícone Produtos.png" /></div>
+          </div>
+        
+          <div class="f1">
+            <img class="cone-abrir-painel" src="img/Ícone Abrir Painel Lateral.png" />
+          </div>
+        
+          <div class="f2" onclick="redirecionar('visao-geral.html')">
+            <img class="cone-viso-geral" src="img/Ícone Visão Geral.png" />
+          </div> 
+        
+          <div class="f3" onclick="redirecionar('home.html')">
+            <img class="cone-home" src="img/home.png" />
+          </div>
+        
+          <div class="f4" onclick="redirecionar('contabilidade.html')">
+            <img class="cone-grfico-linha" src="img/Ícone Gráfico Linha.png" />
+          </div>
+        
+          <div class="f5" onclick="redirecionar('index.html')">
+            <img class="cone-pessoa" src="img/Ícone Pessoa.png" />
+          </div>
+        
+          <div class="f6" onclick="redirecionar('pagina7.html')">
+            <img class="icone-engrenagem" src="img/Icone Engrenagem.png" />
+          </div>
+          <img class="dummy-icon" src="img/Image 23.png" />
+        </div>
+        <div class="prot">
+          <div class="ad-b">
+            <div class="group-6b">
+              <div class="overlap-6b">
+                <div class="rectangle-6b">
+                  <div class="text-wrapper-7b">Salvar Perda ou Devolução</div>
+                  <img class="vector" src="img/vector 10.png">
+                </div>
+              </div>
+            </div>
+            <div class="ajus-0">
+              <div class="line-b1"></div>
+              <div class="ajust-b">
+                <div class="butt-1">
+                  <h1 class="nome-i-fixo">Coloque aqui o Nome do item</h1>
+                  <input placeholder="Nome do item..." class="rectangle-nome" type="text">
+                </div>
+                <div class="butt-2">
+                  <h1 class="nome-i-fixo">Coloque aqui o Valor</h1>
+                  <input placeholder="Valor do item... exemplo: 1239,85" class="rectangle-descr" type="text">
+                </div>
+                <div class="butt-3">
+                  <h1 class="nome-i-fixo">Coloque aqui o Descrição (Não obrigatório)</h1>
+                  <input placeholder="Descrição do item..." class="rectangle-valor" type="text">
+                </div>
+                <h1 class="text-aviso-i">*hgggggggggdddddddffffffffffffdddddddddddddddddddddddgggdddddddffffffffffffddddddddddddddddddddddddddddddddddddhgggggggggdddddddffffffffffffddddddddddddddddddddddddddddddddddddhgggggggggdddddddffffffffffffddddddddddddddddddddddddddddddddddddhgggggggggdddddddffffffffffffddddddddddddddddddddddddddddddddddddhgggggggggdddddddffffffffffffdddddddddddddddddddddddddddddddddddd</h1>
+                <div class="line-b2"></div>
+                <select id="selectYear" class="rectangle-select">
+                  <option value="--nenhum selecionado--">--nenhum selecionado--</option>
+                  <option value="Regitrar Devolução">Regitrar Devolução</option>
+                  <option value="Regitrar Perda">Regitrar Perda</option>
+                </select>
+                <h1 class="nome-i-fixo2">Selecione o local</h1>
+                <button id="salvarBtn" class="salvarBtn">Salvar novo item...</button>
+                <button id="alterarBtn" class="alterarBtn">Alterar item já existente...</button>
+              </div>
+            </div>
+          </div>
+        </div>
+<div class="blur">
+        
+        <div class="overlap">
+          <div class="tabela-scroll"> 
+          <table class="styled-table" id="estoque-tabela"> 
+            <thead>
+              <tr>
+                <th>Nº</th>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Valor de venda</th>
+                <th>Quantidade em estoque</th>
+                <th>Custo do produto</th>
+                <th>Classificação</th>
+              </tr>
+            </thead>
+            <tbody id="tabelaCorpo">
+
+            </tbody>
+          </table>
+          </div>
+        </div>
+        <div class="group">
+          <div class="overlap-2">
+            <img class="lupa-pesquisa" src="img/search 1.png" onclick="pesquisar()" />
+            <input type="text" class="pesquisa" id="searchInput" placeholder="Pesquisar...">
+            <img class="imagem-x" src="img/circulo-x.png" alt="Imagem de X" style="display: none;">
+          </div>
+        </div>
+        
+        <button class="sem-estoque-button">Sem Estoque</button>
+        <button class="insuficiente-button">Insuficiente</button>
+        <button class="com-estoque-button">Com Estoque</button>
+        <a href="editarnovop.html">
+          <button class="adicionar-produto">Adicionar Novo Produto</button>
+        </a>
+        <button class="entrada-e-saida" onclick="redirecionar('Venda.html')">Regitrar Venda</button>
+
+      </div>
+      <div class="bell-wrapper" onclick="alterarClasseBlur()"><img class="bell" src="img/menu-hamburguer (1).png" /></div>
+    </div>
+  </div>
+  </body>
+</html>

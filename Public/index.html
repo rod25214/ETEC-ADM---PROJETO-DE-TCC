@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/index.js"></script>
+  </head>
+  <body onload="carregarInformacoes()">
+  <div class="TV">
+    <div class="div">
+      <div class="menu-lateral">
+          
+        <div class="focus-seleção" onclick="redirecionar('seuproduto.html')">
+          <div class="overlap-group"><img class="cone-produtos" src="img/Ícone Produtos.png" /></div>
+        </div>
+      
+        <div class="f1">
+          <img class="cone-abrir-painel" src="img/Ícone Abrir Painel Lateral.png" />
+        </div>
+      
+        <div class="f2" onclick="redirecionar('visao-geral.html')">
+          <img class="cone-viso-geral" src="img/Ícone Visão Geral.png" />
+        </div> 
+      
+        <div class="f3" onclick="redirecionar('home.html')">
+          <img class="cone-home" src="img/home.png" />
+        </div>
+      
+        <div class="f4" onclick="redirecionar('contabilidade.html')">
+          <img class="cone-grfico-linha" src="img/Ícone Gráfico Linha.png" />
+        </div>
+      
+        <div class="f5" onclick="redirecionar('index.html')">
+          <img class="cone-pessoa" src="img/Ícone Pessoa.png" />
+        </div>
+      
+        <div class="f6" onclick="redirecionar('pagina7.html')">
+          <img class="icone-engrenagem" src="img/Icone Engrenagem.png" />
+        </div>
+        <img class="dummy-icon" src="img/Image 23.png" />
+      </div>
+        <div class="overlap"><img class="img" src="img/Ícone Pessoa1.png" /></div>
+        <input type="text" id="nomeInput" placeholder="Digite aqui o Nome da empresa..." class="nome">
+        <input type="text" id="descriInput" placeholder="Digite aqui a Descrição..." class="descriçao">
+        <img class="line" src="img/Line.png" />
+        <div class="group">
+          <div class="CNPJ-FIXO">CNPJ</div> 
+          <input type="text" pattern="[0-9]*" inputmode="numeric" id="cnpjInput" placeholder="Digite o CNPJ da empresa" class="CNPJ-input" maxlength="14">
+        </div>
+        <div class="group-2">
+          <div class="data-fixo">Data de abertura da empresa</div>
+          <input type="data de abertura da empresa" id="data-abertura-Input" placeholder="Digite a data de abertura" class="data-de-abertura-Input">
+        </div>
+        <div class="group-3">
+          <div class="CNAE-FIXO">CNAE primário</div>
+          <input type="CNAE" id="CNAE-Input" placeholder="Digite o CNAE" class="CNAE-input">
+        </div>
+        <div class="group-4">
+          <div class="CNAE-S-FIXO">CNAE secundário</div>
+          <input type="CNAE secundário" id="CNAE-secundário-Input" placeholder="Digite o CNAE secundário" class="CNAE-secundário-input">
+        </div>
+        <div class="group-5">
+          <div class="CEP-FIXO">CEP</div>
+          <input type="CEP" id="CEP-Input" placeholder="Digite o CEP da empresa" class="CEP-input">
+        </div>
+        <div class="overlap-2">
+          <div class="Email-fixo">Email da empresa</div>
+          <input type="email" id="emailInput" placeholder="Digite o email da empresa" class="email-input">
+        </div>
+        <div class="group-6">
+          <div class="telefone-fixo">Telefone fixo</div>
+          <input type="Telefone fixo" id="telefone fixo-Input" placeholder="Digite o Telefone fixo" class="telefone-fixo-input">
+        </div>
+        <div class="group-7">
+          <div class="telefone-celular">Telefone celular</div>
+          <input type="Telefone celular" id="telefone celular-Input" placeholder="Digite o Telefone celular" class="telefone-celular-input">
+        </div>
+        <div class="group-8">
+          <div class="WhatsApp-fixo">WhatsApp</div>
+          <input type="WhatsApp" id="WhatsApp" placeholder="Digite o WhatsApp" class="WhatsApp-input">
+        </div>
+        <div class="botao-editar">
+          <button class="overlap-3" id="btnSalvar" onclick="redirecionar('teste.html')">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
